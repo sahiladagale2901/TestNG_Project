@@ -16,7 +16,7 @@ public class SignUpTestCase extends BaseClass {
 	public void SignUpPage() throws IOException, InterruptedException {
 		
 		LoginPageObject lpo= new LoginPageObject(driver);
-		Thread.sleep(7000);
+		Thread.sleep(3000);
 		lpo.TryForFree().click();
 		
 		SignUpPageObject spo=new SignUpPageObject(driver);
@@ -47,10 +47,10 @@ public class SignUpTestCase extends BaseClass {
 		commonMethods.SelectDropdownByIndex(spo.SelectCompanyEmployees(), 1);
 		Thread.sleep(3000);
 		commonMethods.SelectDropdownByText(spo.SelectCompanyCountry(),"Singapore");
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		commonMethods.SelectDropdownByIndex(spo.SelectCompanyState(), 1);
 		spo.ClickOnCheckBox().click();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		spo.ClickOnStartMyFreeTrial().click();
 		
 		

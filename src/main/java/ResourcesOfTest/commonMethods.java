@@ -27,7 +27,7 @@ public class commonMethods {
 		String Actual=ActualError;
 		String Expected=ExpectedError;
 		
-		assertion.assertEquals(Actual, Expected);
+		assertion.assertEquals(Actual,Expected);
 		
 		assertion.assertAll();
 	}

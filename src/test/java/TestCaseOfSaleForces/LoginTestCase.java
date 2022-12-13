@@ -14,7 +14,7 @@ import ResourcesOfTest.commonMethods;
 
 public class LoginTestCase extends BaseClass {
 	@Test
-	public void loginPage() throws IOException {
+	public void loginPage() throws IOException, InterruptedException {
 
 		LoginPageObject lpo = new LoginPageObject(driver);
 
@@ -31,6 +31,10 @@ public class LoginTestCase extends BaseClass {
 		commonMethods.Assertion(lpo.ActualError().getText(), ConstantData.Expected);
 		////////////// text check= Forgot Your Password? /////////////////
 		commonMethods.Assertion(lpo.ForgotPasswordText().getText(), ConstantData.ForgotPasswordText);
+		
+		//Thread.sleep(3000);
+		//lpo.TryForFree().click();
+	
 	}
 
 }
